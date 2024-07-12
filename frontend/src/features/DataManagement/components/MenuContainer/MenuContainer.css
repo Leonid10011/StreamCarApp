@@ -1,0 +1,49 @@
+:root {
+    --main-bg-color: #6034b2;
+    --main-bg-hover-color: #0056b3;
+    --btn-text-color: #fff;
+    --navbar-bg-color: #f8f9fa;
+    --content-bg-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.main-menu-container {
+    background-color: var(--content-bg-color);
+    margin-top: 56px; /* height of the navbar */
+}
+
+.menu-navbar {
+    background-color: var(--navbar-bg-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    z-index: 1000;
+}
+
+.menu-navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.menu-navbar .nav-link {
+    font-size: 1.2em;
+    color: var(--main-bg-color);
+    transition: color 0.3s;
+}
+
+.menu-navbar .nav-link:hover {
+    color: var(--main-bg-hover-color);
+}
+
+.content-row {
+    margin-top: 1rem;
+}
+
+.content-col {
+    height: 100%;
+    padding: 20px;
+    background-color: var(--content-bg-color);
+}

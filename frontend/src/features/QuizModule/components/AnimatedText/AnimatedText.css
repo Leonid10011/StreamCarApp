@@ -1,0 +1,9 @@
+.animated-text {
+    letter-spacing: 0.1em;
+    font-size: 3rem;
+    color: var(--main-bg-color);
+    background-color: white;
+    padding: 30px;
+    height: 100%;
+    border-radius: 25px 25px 0 0;
+  }

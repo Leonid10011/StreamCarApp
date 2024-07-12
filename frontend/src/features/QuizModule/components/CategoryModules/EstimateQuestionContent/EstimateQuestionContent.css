@@ -1,0 +1,36 @@
+.main-estiamte-question-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 25px 25px 0 0;
+}
+
+.main-estiamte-question-upper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 100%;
+}
+
+.main-estiamte-question-lower {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+    background-color: white;
+}
+
+.main-estiamte-question {
+    top: 3%;
+    font-size: 2em;
+    left: 20%;
+    position: absolute;
+    text-align: center;
+    color: aliceblue;
+}

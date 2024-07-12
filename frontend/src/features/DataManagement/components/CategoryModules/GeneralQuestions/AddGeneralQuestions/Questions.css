@@ -1,0 +1,29 @@
+.line-numbers, .text-area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    resize: none;
+    overflow: hidden;
+  }
+  
+  .line-numbers {
+    left: -10px;
+    width: 60px; /* Adjust according to your need */
+    background-color: #f8f9fa;
+    color: #6c757d;
+    text-align: right;
+    padding-right: 20px;
+    border-right: 1px solid #dee2e6;
+    box-sizing: border-box;
+  }
+  
+  .text-area {
+    left: 45px; /* Same as line-numbers width */
+    right: 0;
+    padding-left: 10px; /* To avoid text touching the line-numbers */
+    box-sizing: border-box;
+    border-radius: 0;
+    overflow: auto;
+    white-space: pre; /* Prevent text wrapping */
+    word-wrap: normal; /* Ensure long words don't wrap */
+  }

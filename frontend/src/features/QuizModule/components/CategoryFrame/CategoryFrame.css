@@ -1,0 +1,17 @@
+.main-frame {
+    position: relative;
+    border-radius: 0;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+}
+
+.qf-btn-row {
+    height: 25%;
+    width: 90%;
+}
+
+@media (min-width: 768px ){
+    .qf-btn-row {
+        height: 50%;
+    }
+}

@@ -1,0 +1,9 @@
+.main-start-frame {
+    background-color: white;
+    color: var(--main-bg-color);
+    font-size: 4em;
+    height: 80%;
+    width: 80%;
+    border-radius: 25px;
+    border: 3px solid black;
+}

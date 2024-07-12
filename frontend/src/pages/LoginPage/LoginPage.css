@@ -1,0 +1,13 @@
+/* custom.css */
+.custom-checkbox .form-check-input {
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.checkbox-label {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    margin: 0px 40px 30px 0;
+
+}

@@ -1,0 +1,41 @@
+.textarea-container {
+  background-color: #f8f9fa;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.line-numbers {
+  width: 40px;
+  background-color: #e9ecef;
+  color: #495057;
+  text-align: right;
+  padding: 10px;
+  border-right: 1px solid #ced4da;
+  resize: none;
+}
+
+.line-numbers, .text-area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  resize: none;
+  overflow: hidden;
+  line-height: 1.5;
+  font-family: monospace;
+}
+
+.text-area {
+  left: 40px;
+  right: 0;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
+}

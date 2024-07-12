@@ -1,0 +1,3 @@
+const TIME_TO_SHOW_ANSWER = 3000;
+
+export { TIME_TO_SHOW_ANSWER };

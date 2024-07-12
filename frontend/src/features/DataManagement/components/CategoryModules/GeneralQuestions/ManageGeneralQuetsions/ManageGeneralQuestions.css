@@ -1,0 +1,42 @@
+/* ManageGeneralQuestions.css */
+.modify-container {
+  background-color: #f8f9fa;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modify-line-card {
+  max-width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.modify-line-card:hover {
+  background-color: #e0f7fa;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.selected {
+  background-color: #e0f7fa;
+  border: 2px solid #007bff;
+}
+
+.icon-body {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s, font-size 0.3s;
+}
+
+.icon-body:hover {
+  background-color: #007bff;
+  font-size: 1.2rem;
+  color: #fff;
+}
