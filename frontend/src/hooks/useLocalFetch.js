@@ -7,11 +7,12 @@ import {
 } from "../services/api";
 import { useQuizStatus } from "../context/useQuizStatus";
 import { getRandomData } from "./hookUtils";
+import { useCallback } from "react";
 
 const useLocalFetch = () => {
   const { setUpdate } = useQuizStatus();
   // fetch data from API and store in local storage
-  const setLocalData = async () => {
+  const setLocalData = useCallback(async () => {
     const questionsGeneral = await getRemoteQuestionGeneral();
     const questionsPrivate = await getRemoteQuestionPrivate();
     const questionsEstimate = await getRemoteQuestionEstimate();
@@ -37,8 +38,8 @@ const useLocalFetch = () => {
     localStorage.setItem("videosZoom", JSON.stringify(videosZoom));
     localStorage.setItem("imagesGuess", JSON.stringify(imagesGuess));
 
-    setUpdate((prev) => prev + 1);
-  };
+    //setUpdate((prev) => prev + 1);
+  }, []);
 
   // specify functions for random items
   const getRandomQuestionsGeneral = () => getRandomData("questionsGeneral");
@@ -74,14 +75,14 @@ const useLocalFetch = () => {
   };
 
   //
-  const firstInit = () => {
+  const firstInit = useCallback(() => {
     const test = JSON.parse(localStorage.getItem("grossSizes"));
     const forceRefetch = JSON.parse(localStorage.getItem("refetch"));
     // if gross size is empty refetech data
     if (test === null || test === "" || forceRefetch === null) {
       setLocalData();
     }
-  };
+  }, [setLocalData]);
 
   return {
     setLocalData,

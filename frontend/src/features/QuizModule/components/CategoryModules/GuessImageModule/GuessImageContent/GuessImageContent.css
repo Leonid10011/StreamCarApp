@@ -1,35 +1,36 @@
 .main-guess-image-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
 }
 
 .main-guess-image-upper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70%;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65%;
+  width: 100%;
+  margin-bottom: 5%;
 }
 
 .main-guess-image-lower {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30%;
-    width: 100%;
-    background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 100%;
+  background-color: white;
 }
 
 .main-guess-image-question {
-    top: 3%;
-    font-size: 2em;
-    left: 20%;
-    position: absolute;
-    text-align: center;
-    color: aliceblue;
+  top: 3%;
+  font-size: 2em;
+  left: 20%;
+  position: absolute;
+  text-align: center;
+  color: aliceblue;
 }

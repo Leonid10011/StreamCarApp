@@ -1,4 +1,3 @@
-import "./GuessImageModule.css";
 import useLocalFetch from "hooks/useLocalFetch";
 import GuessImageContent from "features/QuizModule/components/CategoryModules/GuessImageModule/GuessImageContent/GuessImageContent";
 import ModuleComponent from "features/QuizModule/components/CategoryModules/ModuleComponent/ModuleComponent";

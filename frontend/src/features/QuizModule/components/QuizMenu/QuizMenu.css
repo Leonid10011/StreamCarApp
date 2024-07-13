@@ -1,56 +1,55 @@
 .qm-main {
-    margin-top: 60px;
-    border-radius: 25px;
-    min-height: 60%;
-    background-color: white;
-    padding: 40px 0;
+  margin-top: 60px;
+  border-radius: 25px;
+  min-height: 60%;
+  background-color: white;
+  padding: 40px 0;
 }
 
 .quiz-menu-btn {
-    width: 80%;
-    font-size: 1.2rem;
-    border-radius: 25px;
-    background-color: var(--main-bg-color);
+  width: 80%;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  background-color: var(--main-bg-color);
 }
 
 .quiz-menu-btn:disabled {
-    font-size: 1rem;
-    background-color: white;
+  font-size: 1rem;
+  background-color: white;
 }
 
 .btn-out {
-    box-sizing: border-box;
-    background-color: rgb(207, 158, 228);
-    color: yellow;
-    border: 1px solid grey;
+  box-sizing: border-box;
+  background-color: rgb(207, 158, 228);
+  color: yellow;
+  border: 1px solid grey;
 }
 
 .btn-in {
-    background-color: grey;
-} 
+  background-color: grey;
+}
 
 .chosen {
-    background-color: yellow;
-    border: 2px dashed brown;
-    color: black;
-
+  background-color: yellow;
+  border: 2px dashed brown;
+  color: black;
 }
 
 .qm-icon {
-    top:0;
-    font-size: 3em;
-    position: absolute;
-    color: aliceblue;
+  top: 0;
+  font-size: 3em;
+  position: absolute;
+  color: aliceblue;
 }
 
 @media (min-width: 768px) {
-    .qm-main {
-        margin-top: 0;
-    }
+  .qm-main {
+    margin-top: 0;
+  }
 
-    .quiz-menu-btn {
-        padding: 15px 0;
-        margin: 10px 0;
-        font-size: 2.6rem;
-    }
+  .quiz-menu-btn {
+    padding: 15px 0;
+    margin: 10px 0;
+    font-size: 2.6rem;
+  }
 }

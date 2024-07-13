@@ -31,7 +31,7 @@ const CategoryFrame = ({ content, callback }) => {
         </Col>
         <Col
           md={3}
-          className="h-100 d-flex flex-row flex-md-column align-items-md-center justify-content-center"
+          className="h-100 d-flex flex-row flex-md-column align-items-md-center justify-content-center m-1"
           style={{ backgroundColor: "white" }}
         >
           <Row className="d-flex align-items-center justify-content-center qf-btn-row">

@@ -1,6 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useEffect } from "react";
-import "./HomePage.css";
 import useLocalFetch from "hooks/useLocalFetch";
 import MenuContent from "features/DataManagement/components/MenuContainer/MenuContent/MenuContent";
 import LinkCard from "features/DataManagement/components/LinkCard/LinkCard";
@@ -11,7 +10,7 @@ const HomePage = () => {
 
   useEffect(() => {
     firstInit();
-  }, []);
+  }, [firstInit]);
 
   return (
     <MenuContent title={"Hauptseite"}>
