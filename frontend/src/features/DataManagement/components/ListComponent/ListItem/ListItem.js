@@ -1,16 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Card } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "./ListItem.css";
+import styles from "./ListItem.module.css";
 
 const ListItem = ({ data, onDelete, onClick, isSelected }) => {
-  useEffect(() => {
-    console.log("eqwe", data.listName);
-  }, [data]);
-
   return (
     <Card
-      className={`mb-2 modify-line-card ${isSelected ? "selected" : ""}`}
+      className={`mb-2 ${styles.modifyLineCard} ${
+        isSelected ? "selected" : ""
+      }`}
       data-id={data._id}
       onClick={() => onClick(data)}
       key={data._id}
@@ -20,7 +18,7 @@ const ListItem = ({ data, onDelete, onClick, isSelected }) => {
         className="p-2 d-flex align-items-center justify-content-start"
       >
         <span
-          className="icon-body"
+          className={styles.iconBody}
           onClick={(e) => {
             e.stopPropagation(); // Prevent triggering onClick on the Card
             onDelete();

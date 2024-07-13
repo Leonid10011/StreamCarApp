@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
 import { Col, Form } from "react-bootstrap";
-import "./InputArea.css";
+import styles from "./InputArea.module.css";
 
 const InputArea = ({ data, setData, ...props }) => {
   const lineNumbersRef = useRef(null);
 
   useEffect(() => {
     const textarea = lineNumbersRef.current;
-    console.log("Data", data);
+
     const updateLineNumbers = (list, ref) => {
       if (ref && list) {
         const lines = list.length;
@@ -24,10 +24,10 @@ const InputArea = ({ data, setData, ...props }) => {
   };
 
   return (
-    <Col className="textarea-container p-0">
-      <textarea className="line-numbers" ref={lineNumbersRef} readOnly />
+    <Col className={`${styles.textareaContainer} p-0`}>
+      <textarea className={styles.lineNumbers} ref={lineNumbersRef} readOnly />
       <Form.Control
-        className="text-area"
+        className={styles.textArea}
         as="textarea"
         placeholder={props.ph ? props.ph : "Format: Jede Zeile eine Frage"}
         value={data}

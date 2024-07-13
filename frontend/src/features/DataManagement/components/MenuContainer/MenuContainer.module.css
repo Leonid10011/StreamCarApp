@@ -1,0 +1,49 @@
+:root {
+  --main-bg-color: #6034b2;
+  --main-bg-hover-color: #0056b3;
+  --btn-text-color: #fff;
+  --navbar-bg-color: #f8f9fa;
+  --content-bg-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.mainMenuContainer {
+  background-color: var(--content-bg-color);
+  margin-top: 56px; /* height of the navbar */
+}
+
+.menuNavbar {
+  background-color: var(--navbar-bg-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  z-index: 1000;
+}
+
+.menuNavbar .navbarBrand {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.menuNavbar .navLink {
+  font-size: 1.2em;
+  color: var(--main-bg-color);
+  transition: color 0.3s;
+}
+
+.menuNavbar .navLink:hover {
+  color: var(--main-bg-hover-color);
+}
+
+.contentRow {
+  margin-top: 1rem;
+}
+
+.contentCol {
+  height: 100%;
+  padding: 20px;
+  background-color: var(--content-bg-color);
+}

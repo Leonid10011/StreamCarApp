@@ -1,11 +1,12 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import styles from "./Layout.module.css";
 
 const Layout = () => {
   return (
-      <div className="main-content">
-        <Outlet />
-      </div>
+    <div className={styles.mainContent}>
+      <Outlet />
+    </div>
   );
 };
 

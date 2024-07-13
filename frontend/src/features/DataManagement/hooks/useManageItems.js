@@ -23,9 +23,9 @@ const useManageItems = ({ fetchFunc, deleteFunc, postFunc }) => {
     setShowModal,
     fetchItems: (actionType) => fetchItems(dispatch, actionType),
     postItem,
-    handleDelete: (id, actionType) => {
-      deleteItem(id);
-      fetchItems(dispatch, actionType);
+    handleDelete: async (id, actionType) => {
+      await deleteItem(id);
+      await fetchItems(dispatch, actionType);
     }, // Delete the item and refetch to trigger rerender
     loading,
     error,

@@ -1,9 +1,9 @@
 import ListItem from "features/DataManagement/components/ListComponent/ListItem/ListItem";
-import "./ListContainer.css";
+import styles from "./ListContainer.module.css";
 
 const ListContainer = ({ items, currentItem, handleClick, handleDelete }) => {
   return (
-    <div className="list-container">
+    <div className={styles.listContainer}>
       {items.map((q) => (
         <ListItem
           key={q._id}

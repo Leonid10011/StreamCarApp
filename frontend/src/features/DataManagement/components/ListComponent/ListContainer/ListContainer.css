@@ -1,9 +1,0 @@
-.list-container {
-    border-radius: 10px;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #dbe0e6; /* Light gray background for contrast */
-    min-height: 100px;
-    max-height: 400px; /* Limit the height of the container */
-    overflow-y: auto; /* Enable vertical scrolling */
-}

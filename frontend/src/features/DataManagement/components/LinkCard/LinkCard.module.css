@@ -1,0 +1,46 @@
+.linkCard {
+  background-color: #fff;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.linkCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(132, 22, 136, 0.2);
+}
+
+.linkCard img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.linkCardBody {
+  padding: 20px;
+  text-align: center;
+}
+
+.linkCardTitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--main-bg-color);
+}
+
+.linkCardDescription {
+  font-size: 1em;
+  color: #000;
+}
+
+.linkCard .cardImgPlaceholder {
+  background-color: var(
+    --main-bg-color
+  ); /* Set your desired background color here */
+  width: 100%; /* Ensure it takes up the full width */
+  border-top-left-radius: calc(
+    0.5rem
+  ); /* Match Bootstrap's card border radius */
+  border-top-right-radius: calc(
+    0.5rem
+  ); /* Match Bootstrap's card border radius */
+}

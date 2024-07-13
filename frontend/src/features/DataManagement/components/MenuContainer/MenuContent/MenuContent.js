@@ -1,14 +1,12 @@
 import { Container } from "react-bootstrap";
-import "./MenuContent.css";
+import styles from "./MenuContent.module.css";
 import MenuTitle from "features/DataManagement/components/MenuContainer/MenuTitle/MenuTitle";
 
 const MenuContent = ({ children, title }) => {
   return (
-    <Container className="menu-content">
+    <Container className={styles.menuContent}>
       <MenuTitle title={title} />
-      <div className="menu-item-wrapper">
-        {children}
-      </div>
+      <div className={styles.menuItemWrapper}>{children}</div>
     </Container>
   );
 };

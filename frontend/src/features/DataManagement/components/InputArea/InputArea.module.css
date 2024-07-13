@@ -1,4 +1,4 @@
-.textarea-container {
+.textareaContainer {
   background-color: #f8f9fa;
   display: flex;
   position: relative;
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-.line-numbers {
+.lineNumbers {
   width: 40px;
   background-color: #e9ecef;
   color: #495057;
@@ -19,7 +19,8 @@
   resize: none;
 }
 
-.line-numbers, .text-area {
+.lineNumbers,
+.textArea {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -29,7 +30,7 @@
   font-family: monospace;
 }
 
-.text-area {
+.textArea {
   left: 40px;
   right: 0;
   border: none;
