@@ -5,7 +5,7 @@ import useManageItems from "features/DataManagement/hooks/useManageItems";
 import ConfirmationModal from "features/QuizModule/components/Modal/ConfirmationModal/ConfirmationModal";
 import useDeleteFromApiAndLocalStorage from "hooks/useDeleteFromApiAndLocalStorage";
 import React from "react";
-import { SET_GENERAL_QUESTIONS } from "reducers/actionTypes";
+import { SET_QUESTIONS_GENERAL } from "reducers/actionTypes";
 import { deleteQuestionFromApi, getRemoteQuestionGeneral } from "services/api";
 
 const ManageGeneralQuestions = () => {
@@ -36,7 +36,7 @@ const ManageGeneralQuestions = () => {
         buttonName="Fragen Hinzufügen"
         buttons={
           <ActionButtons
-            onFetch={() => fetchQuestions(SET_GENERAL_QUESTIONS)}
+            onFetch={() => fetchQuestions(SET_QUESTIONS_GENERAL)}
             onDelete={() => setShowModal(true)}
           />
         }
@@ -44,7 +44,7 @@ const ManageGeneralQuestions = () => {
           <ListContainer
             items={state.questionsGeneral}
             currentItem={currentQuestion}
-            handleDelete={(id) => handleDelete(id, "SET_GENERAL_QUESTIONS")}
+            handleDelete={(id) => handleDelete(id, "SET_QUESTIONS_GENERAL")}
             handleClick={handleClick}
           />
         }

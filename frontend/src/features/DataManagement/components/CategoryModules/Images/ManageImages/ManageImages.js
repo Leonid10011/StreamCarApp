@@ -40,7 +40,7 @@ const ManageImage = () => {
           <ManageImagesContent
             items={state.imagesGuess}
             currentItem={currentImage}
-            handleDelete={handleDelete}
+            handleDelete={(id) => handleDelete(id, "SET_IMAGES_GUESS")}
             handleClick={setCurrentImage}
           />
         }

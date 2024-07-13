@@ -9,22 +9,27 @@ const AddVideos = () => {
   const [videos, setVideos] = useState("");
 
   const handleUpload = async () => {
-    if (videos === "")
+    if (videos === "") {
       throw new Error("Mindestens einen Youtube-Link eingeben");
+    }
+
     const videoArray = videos.split("\n");
 
-    videoArray.forEach((v) => {
+    const promises = videoArray.map(async (v) => {
       try {
         const videoDocument = {
           link: v.slice(-11),
-          question: "",
-          answers: "",
+          question: "placeholder",
+          answer: "placeholder",
         };
-        postVideo("zoom", videoDocument);
+        await postVideo("zoom", videoDocument);
       } catch (error) {
         console.error(error.message);
+        throw error;
       }
     });
+
+    await Promise.all(promises);
   };
 
   const { postItem } = useManageItems({

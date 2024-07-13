@@ -30,7 +30,7 @@ const ManageVideosComponent = ({
             <ListItem
               key={v._id}
               data={v}
-              onDelete={handleDelete}
+              onDelete={() => handleDelete(v._id)}
               onClick={() => handleClick(v)}
               isSelected={currentVideo && currentVideo._id === v._id}
             />

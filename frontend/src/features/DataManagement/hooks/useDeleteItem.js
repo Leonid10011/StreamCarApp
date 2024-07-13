@@ -9,7 +9,7 @@ const useDeleteItem = (deleteFunc) => {
   const deleteItem = async (id) => {
     setLoading(true);
     setError(null);
-    log.info("Deleting items");
+    log.info("Deleting item with id ", id);
     try {
       await deleteFunc(id);
       notify("Erfolgreich gelöscht", "info");

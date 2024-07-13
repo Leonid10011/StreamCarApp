@@ -4,7 +4,7 @@ import ListContainer from "features/DataManagement/components/ListComponent/List
 import useManageItems from "features/DataManagement/hooks/useManageItems";
 import ConfirmationModal from "features/QuizModule/components/Modal/ConfirmationModal/ConfirmationModal";
 import useDeleteFromApiAndLocalStorage from "hooks/useDeleteFromApiAndLocalStorage";
-import { SET_ESTIMATE_QUESTIONS } from "reducers/actionTypes";
+import { SET_QUESTIONS_ESTIMATE } from "reducers/actionTypes";
 import { deleteQuestionFromApi, getRemoteQuestionEstimate } from "services/api";
 
 const ManageEstimateQuestions = () => {
@@ -35,7 +35,7 @@ const ManageEstimateQuestions = () => {
         buttonName={"Schätzfragen Hinzufügen"}
         buttons={
           <ActionButtons
-            onFetch={() => fetchQuestions(SET_ESTIMATE_QUESTIONS)}
+            onFetch={() => fetchQuestions(SET_QUESTIONS_ESTIMATE)}
             onDelete={() => setShowModal(true)}
           />
         }
@@ -44,7 +44,7 @@ const ManageEstimateQuestions = () => {
             items={state.questionsEstimate}
             currentItem={currentQuestion}
             handleClick={handleClick}
-            handleDelete={(id) => handleDelete(id, "SET_ESTIMATE_QUESTIONS")}
+            handleDelete={(id) => handleDelete(id, "SET_QUESTIONS_ESTIMATE")}
           />
         }
       />

@@ -22,7 +22,7 @@ const ManageVideos = () => {
     state,
   } = useManageItems({
     fetchFunc: () => getRemoteVideoZoom(),
-    deleteFunc: (id) => deleteVideo("guess", id),
+    deleteFunc: (id) => deleteVideo("zoom", id),
   });
 
   const handleClick = (video) => {
@@ -38,7 +38,7 @@ const ManageVideos = () => {
         buttons={
           <ActionButtons
             onFetch={() => fetchVideos(SET_VIDEOS_ZOOM)}
-            onDelete={handleDelete}
+            onDelete={() => showModal(true)}
           />
         }
         content={
@@ -46,7 +46,7 @@ const ManageVideos = () => {
             videos={state.videosZoom}
             currentVideo={currentVideo}
             handleClick={handleClick}
-            handleDelete={handleDelete}
+            handleDelete={(id) => handleDelete(id, "SET_VIDEOS_ZOOM")}
           />
         }
       />

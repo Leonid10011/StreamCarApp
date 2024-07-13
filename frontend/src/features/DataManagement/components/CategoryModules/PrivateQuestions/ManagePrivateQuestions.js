@@ -6,7 +6,7 @@ import DataManagementContainer from "features/DataManagement/components/DataMana
 import ListContainer from "features/DataManagement/components/ListComponent/ListContainer/ListContainer";
 import useManageItems from "features/DataManagement/hooks/useManageItems";
 import ActionButtons from "features/DataManagement/components/ActionsButtons/ActionButtons";
-import { SET_PRIVATE_QUESTIONS } from "reducers/actionTypes";
+import { SET_QUESTIONS_PRIVATE } from "reducers/actionTypes";
 
 const ManagePrivateQuestions = () => {
   const { deletePrivate } = useDeleteFromApiAndLocalStorage();
@@ -37,7 +37,7 @@ const ManagePrivateQuestions = () => {
         buttons={
           <>
             <ActionButtons
-              onFetch={() => fetchQuestions(SET_PRIVATE_QUESTIONS)}
+              onFetch={() => fetchQuestions(SET_QUESTIONS_PRIVATE)}
               onDelete={() => setShowModal(true)}
             />
           </>
@@ -46,7 +46,7 @@ const ManagePrivateQuestions = () => {
           <ListContainer
             items={state.questionsPrivate}
             currentItem={currentQuestion}
-            handleDelete={(id) => handleDelete(id, "SET_PRIVATE_QUESTIONS")}
+            handleDelete={(id) => handleDelete(id, "SET_QUESTIONS_PRIVATE")}
             handleClick={handleClick}
           />
         }
