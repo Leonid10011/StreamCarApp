@@ -1,6 +1,5 @@
 import { jwtDecode } from "jwt-decode";
 import axiosInstance from "./axiosInstance";
-require("dotenv").config();
 
 const handleRequest = async (method, endpoint, data = null) => {
   try {

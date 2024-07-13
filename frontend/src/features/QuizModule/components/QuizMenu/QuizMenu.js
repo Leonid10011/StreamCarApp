@@ -6,7 +6,7 @@ import QuizMenuContent from "features/QuizModule/components/QuizMenu/QuizMenuCon
 import CategoryFrame from "features/QuizModule/components/CategoryFrame/CategoryFrame";
 import { useAction } from "context/useAction";
 
-const QuizMenu = ({ ...props }) => {
+const QuizMenu = () => {
   const buttons = [
     { to: "/quizmodule/general", text: "Allgemeinwissen 1", id: "btn1" },
     { to: "/quizmodule/general", text: "Allgemeinwissen 2", id: "btn2" },
@@ -33,7 +33,7 @@ const QuizMenu = ({ ...props }) => {
       Math.random() * Object.keys(enabledButtons).length
     );
     const randomLinkValue = Object.values(enabledButtons)[randomLink];
-    setRandomChoice((prev) => randomLinkValue.id);
+    setRandomChoice(() => randomLinkValue.id);
     return randomLinkValue;
   };
 
