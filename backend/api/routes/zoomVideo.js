@@ -28,7 +28,7 @@ router.post('/zoom/', checkAuth, async (req, res, next) => {
     _id: new mongoose.Types.ObjectId(),
     link: req.body.link,
     question: req.body.question,
-    answer: req.body.answers,
+    answer: req.body.answer,
   });
 
   video
