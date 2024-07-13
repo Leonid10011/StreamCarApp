@@ -4,9 +4,9 @@ This application is used on the Twitch channel "unbegrenztTv" for entertainment 
 
 # Table Of Contents
 
-[Features](#features)
-[Technology Used](#technology-used)
-[Usage](#usage)
+- [Features](#features)
+- [Technology Used](#technology-used)
+- [Usage](#usage)
 
 ## Features
 
