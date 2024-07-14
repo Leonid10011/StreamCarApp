@@ -27,7 +27,7 @@ const useLocalFetch = () => {
       zoomVideos: videosZoom.length,
       bilderErraten: imagesGuess.length,
     };
-    localStorage.setItem("refetch", JSON.stringify(true));
+    localStorage.setItem("fetched", JSON.stringify(true));
     localStorage.setItem("grossSizes", JSON.stringify(dataSizes));
     localStorage.setItem("questionsGeneral", JSON.stringify(questionsGeneral));
     localStorage.setItem("questionsPrivate", JSON.stringify(questionsPrivate));
@@ -38,7 +38,7 @@ const useLocalFetch = () => {
     localStorage.setItem("videosZoom", JSON.stringify(videosZoom));
     localStorage.setItem("imagesGuess", JSON.stringify(imagesGuess));
 
-    //setUpdate((prev) => prev + 1);
+    setUpdate((prev) => prev + 1);
   }, []);
 
   // specify functions for random items
@@ -76,10 +76,8 @@ const useLocalFetch = () => {
 
   //
   const firstInit = useCallback(() => {
-    const test = JSON.parse(localStorage.getItem("grossSizes"));
-    const forceRefetch = JSON.parse(localStorage.getItem("refetch"));
-    // if gross size is empty refetech data
-    if (test === null || test === "" || forceRefetch === null) {
+    const isFetched = JSON.parse(localStorage.getItem("fetched"));
+    if (isFetched === null) {
       setLocalData();
     }
   }, [setLocalData]);

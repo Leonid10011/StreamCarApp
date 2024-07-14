@@ -131,7 +131,6 @@ const markNotificationAsRead = (userId, notificationId) =>
   handleRequest("put", `/notifications/readstatus/${userId}/${notificationId}`);
 
 const loginUser = async (username, password, role) => {
-  console.log("env: ", process.env.REACT_APP_USERNAME);
   const loginData = {
     email: username,
     role,

@@ -19,7 +19,7 @@ frontend/.env
 # Ignore cusotm files
 frontend/backupPrivate
 backend/mongoPassword
-
+backend/ecosystem.config.js
 
 # Ignore build
 frontend/build

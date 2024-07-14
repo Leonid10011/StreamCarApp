@@ -11,10 +11,6 @@ const readStatusRoutes = require('./api/routes/readStatus');
 const morgan = require('morgan');
 const connectDb = require('./db');
 
-// Verify if the environment variables are loaded correctly
-console.log(`Environment: ${process.env.NODE_ENV}`);
-console.log(`Database URI: ${process.env.DB_URI}`);
-
 const app = express();
 
 // Middlewares

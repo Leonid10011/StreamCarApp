@@ -23,26 +23,26 @@ function AddGeneralQuestions() {
 
   return (
     <>
-      {loading ? (
-        <div className="d-flex justify-content-center my-4">
-          <Spinner animation="border" role="status" />
-        </div>
-      ) : (
-        <DataManagementContainer
-          name={"Allgemeinwissen Hinzufügen"}
-          destination={"/questions/manage/general"}
-          buttonName={"Allgemeine Fragen verwalten"}
-          buttons={
+      <DataManagementContainer
+        name={"Allgemeinwissen Hinzufügen"}
+        destination={"/questions/manage/general"}
+        buttonName={"Allgemeine Fragen verwalten"}
+        buttons={
+          loading ? (
+            <div className="d-flex justify-content-center my-4 p-4 w-100 bg-primary">
+              <Spinner animation="border" role="status" />
+            </div>
+          ) : (
             <ActionButton text={"Fragen Hinzufügen"} onClick={postItem} />
-          }
-          content={
-            <AddGeneralQuestionsForm
-              formData={formData}
-              updateFormData={updateFormData}
-            />
-          }
-        />
-      )}
+          )
+        }
+        content={
+          <AddGeneralQuestionsForm
+            formData={formData}
+            updateFormData={updateFormData}
+          />
+        }
+      />
     </>
   );
 }

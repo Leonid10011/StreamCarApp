@@ -21,6 +21,7 @@ body {
   background-color: var(--navbar-bg-color);
   box-shadow: 0 4px 8px var(--shadow-color);
   z-index: 1000;
+  padding-left: 10%;
 }
 
 .menuNavbar .navbarBrand {

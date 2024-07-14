@@ -19,7 +19,7 @@ const LoginPage = () => {
       if (isGuest) {
         res = await loginUser("guest@example.com", password);
       } else {
-        res = await loginUser("leonid.budkov@gmail.com", password);
+        res = await loginUser(process.env.REACT_APP_USERNAME, password);
       }
 
       localStorage.setItem("token", res.token);

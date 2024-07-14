@@ -7,7 +7,6 @@ const handleRequest = async (method, endpoint, data = null) => {
     console.log(`${method.toUpperCase()} API`, res.data);
     return res.data;
   } catch (err) {
-    console.log("Error message: ", err.response);
     if (err.response.status === 403) throw new Error("Keine Berechtigung");
     if (err.response.status === 401)
       throw new Error("Authentifizierungsfehler");

@@ -18,7 +18,7 @@ const MenuContainer = ({ children, title }) => {
     <Container fluid className={styles.mainMenuContainer}>
       <Navbar bg="light" expand="lg" fixed="top" className={styles.menuNavbar}>
         <Navbar.Brand className={styles.navbarBrand} href="/">
-          AppName
+          Stream Car App
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
