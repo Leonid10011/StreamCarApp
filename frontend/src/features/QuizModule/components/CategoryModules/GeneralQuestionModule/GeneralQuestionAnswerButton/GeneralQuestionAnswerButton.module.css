@@ -1,0 +1,33 @@
+.generalAnswerButton {
+  min-width: 800px;
+  max-width: 800px;
+  margin: 10px 0; /* Abstand zwischen den Buttons */
+  background-color: var(--main-bg-color);
+  font-size: 2rem;
+}
+
+.correct {
+  background-color: green;
+}
+
+.wrong {
+  background-color: red;
+}
+
+.locked {
+  background-color: yellow;
+  color: black;
+}
+
+.correct:hover {
+  background-color: green;
+}
+
+.wrong:hover {
+  background-color: red;
+}
+
+.locked:hover {
+  background-color: yellow;
+  color: black;
+}

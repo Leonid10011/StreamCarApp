@@ -1,5 +1,4 @@
 import YouTube from "react-youtube";
-import "./PlayVideoComponent.css";
 import { useEffect } from "react";
 
 const PlayVideoComponent = ({ data }) => {

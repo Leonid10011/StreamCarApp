@@ -1,4 +1,5 @@
 import ListItem from "features/DataManagement/components/ListComponent/ListItem/ListItem";
+import styles from "./ManageVideosComponent.module.css";
 
 const { Row, Col } = require("react-bootstrap");
 const { default: YouTube } = require("react-youtube");
@@ -25,7 +26,7 @@ const ManageVideosComponent = ({
   return (
     <>
       <Row>
-        <Col className="modify-videos">
+        <Col className={styles.modifyVideos}>
           {videos.map((v) => (
             <ListItem
               key={v._id}

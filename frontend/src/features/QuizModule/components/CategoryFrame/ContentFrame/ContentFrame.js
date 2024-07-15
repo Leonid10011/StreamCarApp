@@ -1,8 +1,8 @@
-import "./ContentFrame.css";
+import styles from "./ContentFrame.module.css";
 
 const ContentFrame = ({ ...props }) => {
   return (
-    <div className="main-content" {...props}>
+    <div className={styles.mainContent} {...props}>
       {props.content}
     </div>
   );

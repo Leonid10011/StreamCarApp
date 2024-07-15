@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import "./GeneralQuestionContent.css";
+import styles from "./GeneralQuestionContent.module.css";
 import { useEffect, useState } from "react";
 import AnimatedText from "features/QuizModule/components/AnimatedText/AnimatedText";
 import GeneraQuestionAnswerButton from "features/QuizModule/components/CategoryModules/GeneralQuestionModule/GeneralQuestionAnswerButton/GeneralQuestionAnswerButton";
@@ -15,11 +15,11 @@ const GeneralQuestionContent = ({ data }) => {
   useEffect(() => {}, [clickedOnce]);
 
   return (
-    <div className="main-general-question-content">
+    <div className={styles.mainGeneralQuestionContent}>
       <div>
         <AnimatedText text={data.question} />
       </div>
-      <Container className="button-container" fluid>
+      <Container className={styles.buttonContainer} fluid>
         <Row>
           <Col>
             <GeneraQuestionAnswerButton

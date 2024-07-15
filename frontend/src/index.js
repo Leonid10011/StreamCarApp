@@ -5,7 +5,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import "./index.css";
+import styles from "./index.module.css";
 import Layout from "components/Layout/Layout";
 import AuthenticatedRoute from "pages/AuthenticationRoute/AuthenticationRoute";
 import HomePage from "pages/HomePage/HomePage";

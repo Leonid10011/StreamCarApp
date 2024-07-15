@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./QuizMenu.css";
 import { QuizStatusContext } from "context/useQuizStatus";
 import QuizMenuContent from "features/QuizModule/components/QuizMenu/QuizMenuContent/QuizMenuContent";
 import CategoryFrame from "features/QuizModule/components/CategoryFrame/CategoryFrame";
-import { useAction } from "context/useAction";
+
+import styles from "./QuizMenuContent/QuizMenuContent.module.css";
 
 const QuizMenu = () => {
   const buttons = [
@@ -20,9 +20,6 @@ const QuizMenu = () => {
 
   const [currentStyle, setCurrentStyle] = useState("");
   const [randomChoice, setRandomChoice] = useState("");
-
-  const { action } = useAction();
-
   const navigate = useNavigate();
 
   const chooseRandomLink = () => {
@@ -42,11 +39,10 @@ const QuizMenu = () => {
       let interval;
       let timeout;
 
-      console.log("Action!: ", action);
       interval = setInterval(() => {
         console.log("Intervall", currentStyle);
         setCurrentStyle((prevStyle) =>
-          prevStyle === "btn-out" ? "" : "btn-out"
+          prevStyle === styles.btnOut ? "" : styles.btnOut
         );
       }, 200);
 

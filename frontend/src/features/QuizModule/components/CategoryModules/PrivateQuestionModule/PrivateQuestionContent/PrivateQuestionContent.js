@@ -1,5 +1,4 @@
 import AnimatedText from "features/QuizModule/components/AnimatedText/AnimatedText";
-import "./PrivateQuestionContent.css";
 
 const PrivateQuestionContent = ({ data }) => {
   return (

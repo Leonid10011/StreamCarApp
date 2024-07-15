@@ -1,5 +1,5 @@
 import React from "react";
-import "./ManageVideos.css";
+
 import useDeleteFromApiAndLocalStorage from "hooks/useDeleteFromApiAndLocalStorage";
 import { deleteVideo, getRemoteVideoZoom } from "services/api";
 import DataManagementContainer from "features/DataManagement/components/DataManagementContainer/DataManagementContainer";

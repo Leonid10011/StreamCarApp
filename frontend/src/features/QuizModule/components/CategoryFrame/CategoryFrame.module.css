@@ -1,19 +1,19 @@
-.main-frame {
+.mainFrame {
   position: relative;
   border-radius: 0;
   background-color: var(--main-bg-color);
 }
 
-.qf-btn-row {
+.quizFrameBtnRow {
   height: 25%;
   width: 90%;
 }
 
 @media (min-width: 768px) {
-  .main-frame {
+  .mainFrame {
     height: 100vh;
   }
-  .qf-btn-row {
+  .quizFrameBtnRow {
     height: 50%;
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Alert, Container, Col } from "react-bootstrap";
-import "./UpdateNotification.css";
+import styles from "./UpdateNotification.module.css";
 import { useUserData } from "context/useUserData";
 import { useFetchNotifications } from "hooks/useFetchNotifications";
 import { markNotificationAsRead } from "services/api";
@@ -14,7 +14,7 @@ const UpdateNotification = () => {
   };
 
   return (
-    <Container className="update-notification">
+    <Container className={styles.updateNotification}>
       <p style={{ textAlign: "center", fontSize: "1.5rem" }}>Neuigkeiten</p>
       <hr />
       <Col className="overflow-scroll h-75">

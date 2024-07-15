@@ -1,0 +1,36 @@
+.mainGuessImageContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
+}
+
+.mainGuessImageUpper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65%;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.mainGuessImageLower {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 100%;
+  background-color: white;
+}
+
+.mainGuessImageQuestion {
+  top: 3%;
+  font-size: 2em;
+  left: 20%;
+  position: absolute;
+  text-align: center;
+  color: aliceblue;
+}

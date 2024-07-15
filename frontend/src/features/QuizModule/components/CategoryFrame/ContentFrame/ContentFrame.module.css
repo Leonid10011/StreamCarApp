@@ -1,4 +1,4 @@
-.main-content {
+.mainContent {
   border: 5px solid var(--main-bg-color);
   max-height: 80%;
   width: 100%;
@@ -9,7 +9,7 @@
 }
 
 @media (min-width: 768px) {
-  .main-content {
+  .mainContent {
     height: 100vh;
   }
 }

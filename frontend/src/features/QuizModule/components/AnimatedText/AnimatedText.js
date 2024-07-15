@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./AnimatedText.css";
+import styles from "./AnimatedText.module.css";
 
 const shuffleArray = (array) => {
   let newArray = array.slice();
@@ -40,7 +40,7 @@ const AnimatedText = ({ text }) => {
     return () => clearInterval(interval);
   }, [shuffledIndexes, currentIndex, text]);
 
-  return <div className="animated-text">{displayedText.join("")}</div>;
+  return <div className={styles.animatedText}>{displayedText.join("")}</div>;
 };
 
 export default AnimatedText;

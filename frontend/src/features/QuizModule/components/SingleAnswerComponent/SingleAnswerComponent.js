@@ -1,28 +1,29 @@
 import { Button } from "react-bootstrap";
 import { useState } from "react";
-import "./SingleAnswerComponent.css";
+import styles from "./SingleAnswerComponent.module.css";
 
-const SingleAnswerComponent = ({answer, animationFinished}) => {
+const SingleAnswerComponent = ({ answer, animationFinished }) => {
+  const [showAnswer, setShowAnswer] = useState(false);
 
-    const [showAnswer, setShowAnswer] = useState(false);
+  const handleClick = () => {
+    setShowAnswer(true);
+  };
 
-    const handleClick = () => {
-        setShowAnswer(true);
-    }
-
-    return(
-        <div>
-            {
-                showAnswer 
-                ? <div className="answer-box">{answer}</div>
-                : <Button 
-                    className="answer-button"
-                    disabled={!animationFinished}
-                    onClick={handleClick}
-                    >Antwort</Button>
-            }
-        </div>
-    );
-}   
+  return (
+    <div>
+      {showAnswer ? (
+        <div className={styles.answerBox}>{answer}</div>
+      ) : (
+        <Button
+          className={styles.answerButton}
+          disabled={!animationFinished}
+          onClick={handleClick}
+        >
+          Antwort
+        </Button>
+      )}
+    </div>
+  );
+};
 
 export default SingleAnswerComponent;
