@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import styles from "./GeneralQuestionAnswerButton.module.css";
 import { useRef } from "react";
 
-const GeneraQuestionAnswerButton = ({
+const GeneralQuestionAnswerButton = ({
   answer,
   wasWrong,
   setWasWrong,
@@ -15,17 +15,18 @@ const GeneraQuestionAnswerButton = ({
 
   const handleClick = () => {
     if (btnRef.current) {
-      const oldStyle = btnRef.current.className;
+      const { current: btn } = btnRef;
+
       if (!clickedOnce) {
-        btnRef.current.className = oldStyle + " locked";
+        btn.classList.add(styles.locked);
         setTimeout(() => {
           if (!isCorrect) {
             setWasWrong(true);
           }
-          btnRef.current.className =
-            oldStyle + `${isCorrect ? " correct" : " wrong"}`;
+          btn.classList.remove(styles.locked);
+          btn.classList.add(isCorrect ? styles.correct : styles.wrong);
           console.log("test");
-        }, [500]);
+        }, 500);
       }
 
       handleAnswerClick();
@@ -35,8 +36,8 @@ const GeneraQuestionAnswerButton = ({
   return (
     <Button
       ref={btnRef}
-      className={`general-answer-button ${
-        wasWrong && isCorrect ? " correct" : ""
+      className={`${styles.generalAnswerButton} ${
+        wasWrong && isCorrect ? styles.correct : ""
       }`}
       onClick={handleClick}
     >
@@ -45,4 +46,4 @@ const GeneraQuestionAnswerButton = ({
   );
 };
 
-export default GeneraQuestionAnswerButton;
+export default GeneralQuestionAnswerButton;

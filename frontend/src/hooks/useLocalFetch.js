@@ -58,8 +58,8 @@ const useLocalFetch = () => {
       netQp: localStorage.getItem("questionsPrivate")
         ? JSON.parse(localStorage.getItem("questionsPrivate")).length
         : 0,
-      netQe: localStorage.getItem("questionsEstimates")
-        ? JSON.parse(localStorage.getItem("questionsEstimates")).length
+      netQe: localStorage.getItem("questionsEstimate")
+        ? JSON.parse(localStorage.getItem("questionsEstimate")).length
         : 0,
       netVz: localStorage.getItem("videosZoom")
         ? JSON.parse(localStorage.getItem("videosZoom")).length
