@@ -11,6 +11,7 @@ const shuffleArray = (array) => {
 };
 
 const AnimatedText = ({ text }) => {
+  console.log("test: ", text);
   const [displayedText, setDisplayedText] = useState(
     Array(text.length).fill("_")
   );

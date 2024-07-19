@@ -25,7 +25,6 @@ const GeneralQuestionAnswerButton = ({
           }
           btn.classList.remove(styles.locked);
           btn.classList.add(isCorrect ? styles.correct : styles.wrong);
-          console.log("test");
         }, 500);
       }
 
