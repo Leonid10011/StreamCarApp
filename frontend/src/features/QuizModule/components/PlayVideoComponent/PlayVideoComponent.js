@@ -16,7 +16,7 @@ const PlayVideoComponent = ({ data }) => {
 
   return (
     <>
-      <YouTube videoId={data._id} opts={opts} />
+      <YouTube videoId={data.link} opts={opts} />
     </>
   );
 };
