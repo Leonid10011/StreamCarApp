@@ -35,7 +35,7 @@ const QuizMenuContent = ({ currentStyle, randomChoice, buttons }) => {
                 <Button
                   className={`${currentStyle} ${styles.quizMenuBtn} ${
                     disabledButtons[button.id] ? styles.btnIn : ""
-                  } ${randomChoice === button.id ? " chosen" : ""}`}
+                  } ${randomChoice === button.id ? styles.chosen : ""}`}
                   onClick={() => disableButton(button.id)}
                 >
                   {button.text}
