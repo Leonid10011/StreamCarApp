@@ -11,6 +11,7 @@ import { useCallback } from "react";
 
 const useLocalFetch = () => {
   const { setUpdate } = useQuizStatus();
+
   // fetch data from API and store in local storage
   const setLocalData = useCallback(async () => {
     const questionsGeneral = await getRemoteQuestionGeneral();
@@ -74,7 +75,7 @@ const useLocalFetch = () => {
     return { netSizes, grossSizes };
   };
 
-  //
+  // Initialize local storage if fetched property is null
   const firstInit = useCallback(() => {
     const isFetched = JSON.parse(localStorage.getItem("fetched"));
     if (isFetched === null) {

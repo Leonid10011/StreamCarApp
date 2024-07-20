@@ -1,6 +1,10 @@
 import logger from "../utils/logger";
 
-// Get random item from local storage for a category
+/**
+ * Gets a random data point for given category from the localstorage.
+ * @param {string} category
+ * @returns {object} custom data object form localstorage
+ */
 const getRandomData = (category) => {
   logger.info("Getting Random data for '", category, "' from local storage");
   const qData = JSON.parse(localStorage.getItem(category));

@@ -9,6 +9,11 @@ export const ActionProvider = ({ children }) => {
   const [showBackButton, setShowBackButton] = useState(true);
   const [showStartFrame, setShowStartFrame] = useState(true);
 
+  /**
+   * Disables the buttons and waits for the callback function to finish.
+   * Enable the buttons again after function is processed.
+   * @param {function} callback
+   */
   const actionFunction = async (callback) => {
     setShowStartButton(false);
     setShowBackButton(false);

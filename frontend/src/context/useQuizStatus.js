@@ -25,6 +25,10 @@ export const QuizStatusProvider = ({ children }) => {
     return test;
   };
 
+  /**
+   * Disable the button from the QuizModule with given id.
+   * @param {number} id
+   */
   const disableButton = (id) => {
     const newDisable = { ...disabledButtons, [id]: true };
     setDisabledButtons((prev) => ({ ...prev, [id]: true }));
